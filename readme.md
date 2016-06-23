@@ -1,4 +1,6 @@
-# Setup instructions:
+# MemorizeApp
+
+## Setup instructions:
 
 npm start
 
