@@ -8,11 +8,13 @@ const mapStateToProps = (props, { params: { deckId } }) => ({
 });
 
 const App = ({ deckId, children }) => {
-  return (<div className='app'>
+  return (
+    <div className='app'>
       <Toolbar deckId={deckId} />
       <Sidebar />
       {children}
-  </div>);
+    </div>
+  );
 };
 
 export default connect(mapStateToProps)(App);
