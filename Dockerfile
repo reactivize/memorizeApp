@@ -7,8 +7,9 @@ FROM node:6.2.1
 EXPOSE 3000
 EXPOSE 5858
 
+ENV APPROOT="/devsrc"
 
-WORKDIR /appdev
+WORKDIR $APPROOT
 
-RUN cd /appdev; npm install
+RUN cd $APPROOT; npm install
 CMD npm start
