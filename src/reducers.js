@@ -1,5 +1,5 @@
+//
 export const showBack = (state, action) => {
-
   switch (action.type) {
     case 'SHOW_BACK':
       return action.data || false;
@@ -8,6 +8,7 @@ export const showBack = (state, action) => {
   }
 };
 
+//
 export const cardFilter = (state, action) => {
   switch (action.type) {
     case 'FILTER_CARDS':
@@ -17,6 +18,7 @@ export const cardFilter = (state, action) => {
   }
 };
 
+//
 export const cards = (state, action) => {
   switch (action.type) {
     case 'RECEIVE_DATA':
@@ -24,9 +26,8 @@ export const cards = (state, action) => {
     case 'ADD_CARD':
       let newCard = Object.assign({}, action.data, {
         score: 1,
-        id: +new Date()
+        id: Number(new Date())
       });
-
       return state.concat([newCard]);
     case 'UPDATE_CARD':
       let cardUpdate = action.data;
@@ -41,6 +42,7 @@ export const cards = (state, action) => {
   }
 };
 
+//
 export const decks = (state, action) => {
   switch (action.type) {
     case 'RECEIVE_DATA':
@@ -48,7 +50,7 @@ export const decks = (state, action) => {
     case 'ADD_DECK':
       let newDeck = {
         name: action.data,
-        id: +new Date()
+        id: Number(new Date()) // 1467096801133
       };
       return state.concat([newDeck]);
     default:
@@ -56,6 +58,7 @@ export const decks = (state, action) => {
   }
 };
 
+//
 export const addingDeck = (state, action) => {
   switch (action.type) {
     case 'SHOW_ADD_DECK':
@@ -63,7 +66,7 @@ export const addingDeck = (state, action) => {
     case 'HIDE_ADD_DECK':
       return false;
     default:
-      return !!state;
+      return Boolean(state);
   }
 };
 
