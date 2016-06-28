@@ -23,21 +23,21 @@ const history = syncHistoryWithStore(browserHistory, store);
 
 
 const routes = (<Provider store={store}>
-    <Router history={history}>
+  <Router history={history}>
     <Route path='/' component={App}>
-        <Route path='/deck/:deckId' component={VisibleCards}>
-          <Route path='/deck/:deckId/new' component={NewCardModal} />
-          <Route path='/deck/:deckId/edit/:cardId' component={EditCardModal} />
-          <Route path='/deck/:deckId/study' component={StudyModal} />
-        </Route>
+      <Route path='/deck/:deckId' component={VisibleCards}>
+        <Route path='/deck/:deckId/new' component={NewCardModal} />
+        <Route path='/deck/:deckId/edit/:cardId' component={EditCardModal} />
+        <Route path='/deck/:deckId/study' component={StudyModal} />
       </Route>
-    </Router>
-  </Provider>);
+    </Route>
+  </Router>
+</Provider>);
 
 
 //
 function run() {
- // let state = store.getState();
+  // let state = store.getState();
   ReactDOM.render(routes, document.getElementById('root'));
 }
 
