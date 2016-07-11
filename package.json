@@ -9,7 +9,7 @@
     "start": "babel-node --debug ./server.js"
   },
   "keywords": [],
-  "author": "reactive",
+  "author": "reactivator",
   "license": "",
   "dependencies": {
     "body-parser": "^1.15.1",
