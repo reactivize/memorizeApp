@@ -2,6 +2,8 @@
 
 ## Setup instructions:
 
+npm i
+
 npm start
 
 browse to... 
@@ -10,7 +12,7 @@ http://localhost:3333
 or...
 npm run server
 which automatically runs a browser window, browsing itself to...
-http://127.0.0.1:1234/
+http:/localhost:1234/
 
 
 
@@ -32,7 +34,7 @@ http://127.0.0.1:1234/
 - express
 - redux
 - localstorage
--- so F5 maintain state
+-- so browser's F5 (refresh) maintains state
 
 
 ## Task:
