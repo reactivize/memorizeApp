@@ -9,7 +9,7 @@ import { fetchData } from './actions';
 import * as reducers from './reducers';
 reducers.routing = routerReducer;
 
-console.log(React);
+//console.log(React);
 
 import App from './components/App';
 import VisibleCards from './components/VisibleCards';
@@ -42,8 +42,12 @@ function run() {
 }
 
 
-//
+/**
+ * 
+ */
 function save() {
+  console.log('app.js: start: save');
+
   const state = store.getState();
 
   fetch('/api/data', {
@@ -59,8 +63,11 @@ function save() {
   });
 }
 
+
 //
 function init() {
+  console.log('app.js: start: init');
+
   run();
   store.subscribe(run);
   store.subscribe(save);

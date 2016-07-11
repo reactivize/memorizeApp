@@ -12,9 +12,12 @@ export const setShowBack = back => ({ type: 'SHOW_BACK', data: back });
 export const receiveData = data5 => ({ type: 'RECEIVE_DATA', data: data5 });
 
 
-//
-//
+/**
+ * 
+ */
 export const fetchData = () => {
+  console.log('actionsjs: start: fetchData');
+
   return dispatch => {
     fetch('/api/data')
       .then(res => res.json())
