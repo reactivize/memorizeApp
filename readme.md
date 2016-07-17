@@ -12,10 +12,10 @@ http://localhost:3333
 or...
 npm run server
 which automatically runs a browser window, browsing itself to...
-http://127.0.0.1:1234/
+http://127.0.0.1:1234
 
 or browse to...
-http:/localhost:1234/
+http:/localhost:1234
 
 
 
