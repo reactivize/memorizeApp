@@ -50,7 +50,7 @@ function save() {
 
   const state = store.getState();
 
-  fetch('/api/data', {
+  window.fetch('/api/data', {
     method: 'POST',
     headers: {
       Accept: 'application/json',
@@ -74,5 +74,9 @@ function init() {
   store.dispatch(fetchData());
 }
 
-//
+
+/**
+ * react entrypoint
+ * - and redux from hell
+ */
 init();

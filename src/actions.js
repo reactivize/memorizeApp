@@ -19,8 +19,11 @@ export const fetchData = () => {
   console.log('actionsjs: start: fetchData');
 
   return dispatch => {
-    fetch('/api/data')
+    window.fetch('/api/data')
       .then(res => res.json())
       .then(json => dispatch(receiveData(json)));
   };
 };
+
+
+
