@@ -47,3 +47,5 @@ move css out of public/style.css
 webpack plugin to dynamically inject the index.html into the /public folder
 
 
+## Status:
+npm package updates coming soon.
